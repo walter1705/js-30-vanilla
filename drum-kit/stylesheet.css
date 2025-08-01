@@ -1,0 +1,28 @@
+
+
+body {
+  background-image: url(./assets/static/wallhaven.jp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+
+}
+
+.keys_container {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 2rem;
+}
+
+.key {
+  margin: 1rem;
+  padding: 2rem;
+  backdrop-filter: blur(2px);
+  border: solid 1px black;
+}

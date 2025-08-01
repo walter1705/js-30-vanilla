@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./stylesheet.css">
+  
+  <title>Drum</title>
+</head>
+<body>
+  <div class="keys_container" id="keys">
+    <div class="key" data-key="65">
+      <kbd>A</kbd>
+    </div>
+    <div class="key" data-key="83">
+      <kbd>S</kbd></div>
+    <div class="key" data-key="68">
+      <kbd>D</kbd>
+    </div>
+    <div class="key" data-key="87">
+      <kbd>W</kbd>
+    </div>
+    <div class="key" data-key="76">
+      <kbd>L</kbd></div>
+    <div class="key" data-key="75"> 
+      <kbd>K</kbd></div>
+    <div class="key" data-key="74"> <kbd>J</kbd>
+    </div>
+    <div class="key" data-key="85">
+      <kbd>U</kbd></div>
+    <div class="key" data-key="73">
+      <kbd>I</kbd>
+    </div>
+    <div class="key" data-key="84">
+      <kbd>T</kbd>
+    </div>
+    <div class="key" data-key="82">
+      <kbd>R</kbd>
+    </div>
+  </div>
+
+  <script>
+    window.addEventListener("keydown", function(event) {
+      console.log(event.keyCode);
+    });
+  </script>
+</body>
+</html>
