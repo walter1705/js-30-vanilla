@@ -1,12 +1,17 @@
 
 
 body {
-  background-image: url(./assets/static/wallhaven.jp);
-  background-repeat: no-repeat;
+  display: flex;
+  background-image: url("./assets/static/wallhaven.jpg");
   background-size: cover;
-  
-
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "MS Sans Serif", sans-serif;
+  font-size: 11px;
+  color: #000000;
 }
+
 
 .keys_container {
   display: flex;
@@ -25,4 +30,11 @@ body {
   padding: 2rem;
   backdrop-filter: blur(2px);
   border: solid 1px black;
+  border-radius: 4px;
+}
+
+.playing{
+  transition: 0.3s;
+  box-shadow: 3px 3px 8px gray;
+  background-color: aqua;
 }
