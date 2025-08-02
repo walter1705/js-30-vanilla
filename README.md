@@ -1,4 +1,39 @@
-Challenged made by [WesBos](https://x.com/wesbos)
+Educational challenge made with vanilla JavaScript by [WesBos](https://x.com/wesbos).
+
+1. Drum kit ✔.
 
 
-1. Drum kit.
+---
+
+TODO
+
+2. Clock.
+3. CSS Variables.
+4. Array Cardio Day 1.
+5. Flex Panel Gallery.
+6. Type Ahead.
+7. Array Cardio Day 2.
+8. Fun with HTML5 Canvas.
+9. Dev Tools Domination.
+10. Hold Shift and Checkboxes.
+11. Custom Video Player.
+12. Key Sequence Detection.
+13. Slide in on Scroll.
+14. JavaScript References VS Copying.
+15. LocalStorage.
+16. Mouse Move Shadow.
+17. Sort Without Articles.
+18. Adding Up Times with Reduce.
+19. Webcam Fun.
+20. Speech Recognition.
+21. Geolocation.
+22. Follow Along Links.
+23. Speech Synthesis.
+24. Sticky Nav.
+25. Event Capture, Propagation, Bubbling, and Once.
+26. Stripe Follow Along Nav.
+27. Click and Drag.
+28. Video Speed Controller.
+29. Countdown Timer.
+30. Whack-a-Mole.
+
