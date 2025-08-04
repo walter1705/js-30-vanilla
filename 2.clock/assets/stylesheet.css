@@ -1,0 +1,47 @@
+html {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("./overlay.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  min-height: 100vh;
+}
+
+.clock {
+  display: grid;
+  width: 300px;   
+  height: 300px;
+  border: 6px solid black;
+  border-radius: 50%;
+  backdrop-filter: blur(1px);
+  align-items: center;
+  justify-content: center;
+}
+
+
+.hand {
+  width: 50%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  transform-origin: 100%;
+}
+
+.hour {
+  height: 8px;
+  background: black;
+}
+
+.minute {
+  height: 6px;
+  background: gray;
+}
+
+.seconds {
+  height: 4px;
+  background: red;
+}

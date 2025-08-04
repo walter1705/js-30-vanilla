@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./stylesheet.css">
+  
+  <title>Drum</title>
+</head>
+<body>
+  <div class="keys_container" id="keys">
+    <div class="key" data-key="65">
+      <kbd>A</kbd>
+    </div>
+    <div class="key" data-key="83">
+      <kbd>S</kbd></div>
+    <div class="key" data-key="68">
+      <kbd>D</kbd>
+    </div>
+    <div class="key" data-key="87">
+      <kbd>W</kbd>
+    </div>
+    <div class="key" data-key="76">
+      <kbd>L</kbd></div>
+    <div class="key" data-key="75"> 
+      <kbd>K</kbd></div>
+    <div class="key" data-key="74"> <kbd>J</kbd>
+    </div>
+    <div class="key" data-key="85">
+      <kbd>U</kbd></div>
+    <div class="key" data-key="73">
+      <kbd>I</kbd>
+    </div>
+    <div class="key" data-key="84">
+      <kbd>T</kbd>
+    </div>
+    <div class="key" data-key="82">
+      <kbd>R</kbd>
+    </div>
+  </div>
+
+  <audio data-key="65" src="./assets/808-Drum-Kit/808_S.wav"></audio>
+  <audio data-key="83" src="./assets/808-Drum-Kit/808_O.wav"></audio>
+  <audio data-key="68" src="./assets/808-Drum-Kit/808_K.wav"></audio>
+  <audio data-key="87" src="./assets/808-Drum-Kit/808_C.wav"></audio>
+  <audio data-key="76" src="./assets/808-Drum-Kit/808_7.wav"></audio>
+  <audio data-key="75" src="./assets/808-Drum-Kit/808_6.wav"></audio>
+  <audio data-key="74" src="./assets/808-Drum-Kit/808_5.wav"></audio>
+  <audio data-key="85" src="./assets/808-Drum-Kit/8O8_R.wav"></audio>
+  <audio data-key="73" src="./assets/808-Drum-Kit/808_4.wav"></audio>
+  <audio data-key="84" src="./assets/808-Drum-Kit/808_3.wav"></audio>
+  <audio data-key="82" src="./assets/808-Drum-Kit/808_2.wav"></audio>
+
+  <script>
+    function playSound(event) {
+      const audio = document.querySelector(`audio[data-key="${event.keyCode}"]`);
+      const key = document.querySelector(`.key[data-key="${event.keyCode}"]`);
+      if(!audio) return;
+      audio.currentTime = 0;
+      audio.play();
+      key.classList.add('playing');
+    }
+
+    function removeTransition(event) {
+      if(event.propertyName !== 'transform') return;
+      this.classList.remove('playing');
+    }
+
+    const keys = document.querySelectorAll('.key');
+    keys.forEach(key => key.addEventListener("transitionend", removeTransition));
+    window.addEventListener("keydown", playSound);
+  </script>
+</body>
+</html>
