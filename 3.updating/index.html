@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Updating</title>
+
+  
+  <link rel="stylesheet" href="stylesheets.css">
+
+</head>
+
+<body>
+  <h1>
+    Update CSS Variable with <span class="h">JS</span>
+  </h1>
+
+  <div class="controls">
+      <label for="space">Space</label>
+      <input min="10" max="200" name="space" data-sizing="px" type="range">
+
+      <label for="blur">Blur</label>
+      <input data-sizing="px" min="0" max="25" name="blur" min="" type="range">
+
+      <label for="color">Colorbase</label>
+      <input name="color" class="" type="color" value="#ffc600">
+    </div>
+
+  
+  <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*sTBwYmYttxBCCIm8JfRLpg.jpeg" alt="elephant in a room">
+  
+  <script>
+    let inputsArray = []
+    document.querySelectorAll('.controls input').forEach((el, key) => {
+      inputsArray.push(el)
+    })
+    
+    function changeValue() {
+      const suffix = this.dataset.sizing || ''
+      document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix)
+    }
+
+    inputsArray.forEach(input => {
+      input.addEventListener('change', changeValue)
+    })
+    
+    
+
+    console.log(inputsArray)
+  </script>
+</body>
+</html>

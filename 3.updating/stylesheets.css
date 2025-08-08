@@ -1,0 +1,46 @@
+:root {
+  --color: #668c9d;
+  --blur: 5px;
+  --space: 15px;
+}
+
+body {
+  text-align: center;
+  background: linear-gradient(to right, #2c3e50, #000000);
+  font-size: large;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+label {
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  
+}
+
+h1 {
+  color: rgb(42, 68, 113);
+}
+
+span {
+  color: var(--color);
+}
+
+img {
+  padding: var(--space);
+  filter: blur(var(--blur));
+  background: var(--color);
+  margin-top: 4rem;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+input {
+  max-width: 320px;
+}
+
