@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const inventors = [
+      { first: 'Leonardo', last: 'da Vinci', birthdate: 1452, passed: 1519 },
+      { first: 'Galileo', last: 'Galilei', birthdate: 1564, passed: 1642 },
+      { first: 'Isaac', last: 'Newton', birthdate: 1643, passed: 1727 },
+      { first: 'Benjamin', last: 'Franklin', birthdate: 1706, passed: 1790 },
+      { first: 'Michael', last: 'Faraday', birthdate: 1791, passed: 1867 },
+      { first: 'Charles', last: 'Darwin', birthdate: 1809, passed: 1882 },
+      { first: 'Thomas', last: 'Edison', birthdate: 1847, passed: 1931 },
+      { first: 'Nikola', last: 'Tesla', birthdate: 1856, passed: 1943 },
+      { first: 'Alexander', last: 'Graham Bell', birthdate: 1847, passed: 1922 },
+      { first: 'Marie', last: 'Curie', birthdate: 1867, passed: 1934 },
+      { first: 'Albert', last: 'Einstein', birthdate: 1879, passed: 1955 },
+      { first: 'Guglielmo', last: 'Marconi', birthdate: 1874, passed: 1937 },
+      { first: 'Orville', last: 'Wright', birthdate: 1871, passed: 1948 },
+      { first: 'Alan', last: 'Turing', birthdate: 1912, passed: 1954 },
+      { first: 'John', last: 'von Neumann', birthdate: 1903, passed: 1957 },
+      { first: 'Grace', last: 'Hopper', birthdate: 1906, passed: 1992 },
+      { first: 'Tim', last: 'Berners-Lee', birthdate: 1955, passed: 1978 },
+      { first: 'Ada', last: 'Lovelace', birthdate: 1815, passed: 1852 },
+      { first: 'Louis', last: 'Pasteur', birthdate: 1822, passed: 1895 },
+      { first: 'Hedy', last: 'Lamarr', birthdate: 1914, passed: 2000 }
+    ];
+
+    const people = [
+      'Walter, Granada', 'Ana, Madrid', 'Carlos, Barcelona', 
+      'Sofia, Valencia', 'Miguel, Sevilla', 'Laura, Bilbao',
+      'Javier, Malaga', 'Elena, Zaragoza', 'David, Murcia',
+      'Isabel, Alicante', 'Antonio, Cordoba', 'Carmen, Valladolid',
+      'Jose, Vigo', 'Lucia, Gijon', 'Pablo, Salamanca',
+      'Marta, Toledo', 'Alejandro, Pamplona', 'Cristina, Santander',
+      'Raul, Caceres', 'Silvia, Albacete', 'Fernando, Burgos',
+      'Beatriz, Almeria', 'Roberto, Jaen', 'Marina, Tarragona',
+      'Daniel, Lleida', 'Patricia, Huelva', 'Jorge, Cadiz',
+      'Natalia, Badajoz', 'Francisco, Avila', 'Victoria, Logroño',
+      'Alberto, Segovia', 'Rosa, Cuenca', 'Manuel, Zamora',
+      'Eva, Teruel', 'Andres, Palencia', 'Belen, Huesca',
+      'Sergio, Soria', 'Teresa, Guadalajara', 'Ricardo, Ciudad Real',
+      'Monica, Leon', 'Ruben, Pontevedra', 'Julia, Lugo',
+      'Diego, Ourense', 'Pilar, Alava', 'Ignacio, Guipuzcoa',
+      'Susana, Vizcaya', 'Gonzalo, La Rioja', 'Angela, Navarra',
+      'Hector, Castellon', 'Rocio, Gerona'
+    ];
+
+    const bornIn = inventors.filter((inventor) => {
+      if(inventor.birthdate >= 1500 && inventor.birthdate < 1600) return true
+      return false
+    })
+
+    console.table(bornIn)
+
+    const namesList = inventors.map(inventor => inventor.first + ' ' + inventor.last)
+    
+    console.table(namesList)
+
+    const joder = inventors.sort((inventor, i2)=> inventor.birthdate > i2.birthdate)
+    console.table(joder)
+
+    const chaval = inventors.reduce((n, inventor) => n+=(inventor.passed - inventor.birthdate),0)
+
+    console.log(chaval)
+
+    function getAge(i) {
+      return i.passed - i.birthdate
+    }
+
+    const oldest = inventors.sort((inventor, inventor2) => {
+      const i1 = getAge(inventor)
+      const i2 = getAge(inventor2)
+      return i1 > i2 ?  1 : -1
+    })
+
+    console.table(oldest)
+
+    const ordered = people.sort()
+  </script>
+</body>
+</html>
